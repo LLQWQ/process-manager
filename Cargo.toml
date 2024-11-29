@@ -1,0 +1,17 @@
+[package]
+name = "process-manager"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.93"
+chrono = "0.4.38"
+clap = { version = "4.5.21", features = ["derive"] }
+dialoguer = "0.11.0"
+duct = "0.13.7"
+json5 = "0.4.1"
+libc = "0.2.166"
+nix = { version = "0.29.0", features = ["process"] }
+prettytable-rs = "0.10.0"
+serde = { version = "1.0.215", features = ["derive"] }
+sysinfo = "0.32.1"

@@ -30,21 +30,31 @@ enum Commands {
 
 #[derive(Args)]
 pub struct AddArgs {
+    /// 从pid导入信息
     #[arg(long)]
     pid: Option<u32>,
+    /// 标签
     #[arg(short, long)]
     tags: Option<Vec<String>>,
+    /// 进程唯一名称
     #[arg(short, long)]
     name: Option<String>,
+    /// 执行命令
     #[arg(short, long)]
     command: Option<String>,
+    /// 进程类型
     #[arg(short, long)]
     process_type: Option<String>,
+    /// 日志输出文件地址
     #[arg(short, long)]
     log_path: Option<String>,
-    /// 检测启动命令
-    #[arg(short, long)]
+    /// 健康检测命令
+    #[arg(long)]
     detection_start_cmd: Option<String>,
+    /// pid查询命令
+    #[arg(long)]
+    pid_search_cmd: Option<String>,
+    /// 备注
     #[arg(long)]
     comment: Option<String>,
 }
